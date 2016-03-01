@@ -1,0 +1,22 @@
+<md-content>
+    <section>
+        <md-list>
+            <md-subheader class="md-primary header">Room: {{room}} <span align="right">Userame: {{username}} </span> </md-subheader>
+            <md-whiteframe ng-repeat="m in messages" class="md-whiteframe-z2 message" layout layout-align="center center">
+                <md-list-item class="md-3-line">
+                    <!-- <img ng-src="img/user.png" class="md-avatar" alt="User" /> -->
+                    <div class="md-list-item-text">
+                        <h3>{{m.username }}</h3>
+                        <p>{{m.content}}</p>
+                    </div>
+                </md-list-item>
+            </md-whiteframe>
+        </md-list>
+    </section>
+    <div layout="row">
+        <md-list flex ng-repeat="r in rooms">
+            <md-subheader class="md-no-sticky" ng-click="handleRoomSubMenu(r)">{{r}}</md-subheader>    
+        </md-list>
+    </div>
+</md-content>
+
